@@ -1,0 +1,4 @@
+
+DEFAULT_CONFIG_FILE = "default"
+DEFAULT_OUTPUT = "outputDir"
+DEFAULT_LOGGING = "log.txt"

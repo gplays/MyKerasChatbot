@@ -1,0 +1,120 @@
+{
+  "general": {
+    "verbose": true,
+
+    "data_dir": "path",
+    "out_dir": "path",
+    "vocabulary": "path/to/voc",
+    "pretrained_vectors": "",
+    "inputs": [],
+    "store_model": "",
+    "prebuilt_model": "",
+    "pretrained_weights": "",
+
+    "optimizer": "Adam",
+    "lr": 0.001,
+    "clipnorm": 1,
+    "clipvalue": 0,
+    "momentum": 0,
+    "nesterov": false,
+    "rho": 0.9,
+    "beta_1": 0.9,
+    "beta_2": 0.999,
+    "decay": null,
+    "gamma": 0.8,
+
+    "name": "",
+    "vocabulary_size": 20000,
+    "speakers_size": 1000,
+    "text_embedding_hidden_size": 32,
+    "speaker_embedding_hidden_size": 32,
+    "LSTM": true,
+    "n_layers_decoder": 3
+  },
+  "model_params": {
+    "aliases": {
+      "weight_decay": 1e-4,
+      "recurrent_weight_decay": 0
+    },
+    "main": {
+      "kernel_regularizer": "recurrent_weight_decay",
+      "recurrent_regularizer": "recurrent_weight_decay",
+      "conditional_regularizer": "recurrent_weight_decay",
+      "bias_regularizer": "recurrent_weight_decay",
+      "attention_context_wa_regularizer": "weight_decay",
+      "attention_recurrent_regularizer": "weight_decay",
+      "attention_context_regularizer": "weight_decay",
+      "bias_ba_regularizer": "weight_decay",
+      "embeddings_regularizer": "weight_decay",
+      "dropout": 0,
+      "recurrent_dropout": 0,
+      "conditional_dropout": 0,
+      "attention_dropout": 0,
+      "kernel_initializer": "glorot_uniform",
+      "recurrent_initializer": "orthogonal",
+      "embeddings_initializer": "glorot_uniform",
+      "attention_context_initializer": "glorot_uniform",
+      "attention_mode": "add",
+      "att_units": 32,
+      "trainable": 1
+    },
+    "encoder": {},
+    "decoder": {},
+    "infer": {},
+    "input_text": {},
+    "word_embedding": {
+      "trainable": 0,
+      "mask_zero": 1
+    },
+    "deep_word_embedding": {
+    },
+    "encoder_lstm": {
+      "merge_mode": "concat"
+    },
+    "speaker_embedding": {},
+    "personna_soft_max": {
+      "activation": "softmax"
+    },
+    "target_text": {},
+    "encoder_mean": {
+      "kernel_regularizer": "weight_decay",
+      "bias_regularizer": "weight_decay"
+    },
+    "encoder_mask": {
+      "kernel_regularizer": "weight_decay",
+      "bias_regularizer": "weight_decay"
+    },
+    "decoder_initial_state": {
+      "kernel_regularizer": "weight_decay",
+      "bias_regularizer": "weight_decay"
+    },
+    "decoder_initial_memory": {
+      "kernel_regularizer": "weight_decay",
+      "bias_regularizer": "weight_decay"
+    },
+    "decoder_rnn_cond": {},
+    "deep_decoder": {},
+    "permute": {},
+    "logit_lstm": {
+      "kernel_regularizer": "weight_decay",
+      "bias_regularizer": "weight_decay"
+    },
+    "logit_ctx": {
+      "kernel_regularizer": "weight_decay",
+      "bias_regularizer": "weight_decay"
+    },
+    "logit_emb": {
+      "kernel_regularizer": "weight_decay",
+      "bias_regularizer": "weight_decay"
+    },
+    "skip_vector_activation": {},
+    "deep_output": {
+      "comment": "layers config should be tuple (activation,dimension)",
+      "layers_cfg": []
+    },
+    "maxout": {},
+    "softout": {
+      "activation": "softmax"
+    }
+  }
+}
